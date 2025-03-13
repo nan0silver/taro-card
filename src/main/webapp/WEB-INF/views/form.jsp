@@ -23,7 +23,7 @@
 <body>
 <main>
     <section>
-        <h1>✨ArcanaFox: 운명을 읽는 타로 ✨</h1>
+        <h1>✨Arcana: 운명을 읽는 타로 ✨</h1>
         <div class="tarot-card-bg">
             <div class="tarot-card">
                 <svg width="120" height="180" viewBox="0 0 120 180">
