@@ -2,21 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="ArcanaFox: 운명을 읽는 타로" />
-    <meta
-            property="og:description"
-            content="당신의 운명을 읽어드립니다."
-    />
-    <meta
-            property="og:image"
-            content="https://github.com/nan0silver/taro-card/blob/main/src/main/webapp/assets/taro_fox.jpeg?raw=true"
-    />
+
+    <!-- OG tag -->
+    <title><%= request.getAttribute("pageTitle") %></title>
+    <meta property="og:title" content="<%= request.getAttribute("ogTitle") %>" />
+    <meta property="og:description" content="<%= request.getAttribute("ogDescription") %>" />
+    <meta property="og:image" content="<%= request.getAttribute("ogImageUrl") %>" />
+    <meta property="og:url" content="<%= request.getAttribute("ogPageUrl") %>" />
+
+
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="<%=request.getContextPath()%>/assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="<%=request.getContextPath()%>/assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="<%=request.getContextPath()%>/assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="<%=request.getContextPath()%>/assets/favicon/site.webmanifest" />
-    <title>ArcanaFox: 운명을 읽는 타로</title>
+
     <link href="<%=request.getContextPath()%>/assets/form-style.css" rel="stylesheet">
 </head>
 <body>
@@ -81,7 +82,7 @@
             <label for="description">
                 설명 입력
             </label>
-            <input id="description" type="text" name="description" placeholder="궁금한걸 입력하세요.">
+            <input id="description" type="text" name="description" placeholder="오늘은 무엇이 궁금하신가요?">
             <button>결과 보기</button>
         </form>
 
